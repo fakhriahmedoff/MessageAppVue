@@ -1,0 +1,13 @@
+h1 {
+    text-align: center;
+  }
+  .mail-container {
+    width: 30%;
+    margin: 50px auto;
+  }
+  .buttons {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    gap: 20px;
+  }

@@ -1,26 +1,36 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <div class="mail-container">
+      <h1>Enter email</h1>
+       {{email}}
+      <input v-model="email" class="form-control" placeholder="Email" required />
+      <div class="buttons">
+        <MyBtn @click="send()"  :count="1" />
+        <MyBtn :count="10" />
+      </div>
+
+    </div>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import MyBtn from "./components/Button.vue";
+import './assets/styles/style.css';
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    MyBtn,
+  },
+  data() {
+    return {
+      email: ''
+    }
+  },
+  methods: {
+    send() {
+      
+    },
+  },
+};
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
